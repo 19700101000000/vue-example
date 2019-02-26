@@ -40,6 +40,7 @@ Vue.use(VueRouter)
 export default {
   name: 'app',
   router: new VueRouter ({
+    mode: 'history',
     routes: [
       { path: '/', component: Index },
       { path: '/link1', component: Link1 },
