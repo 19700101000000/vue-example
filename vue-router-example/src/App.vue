@@ -4,6 +4,7 @@
       <b-row>
         <b-col class="mt-2">
           <b-list-group horizontal>
+            <router-link class="list-group-item list-group-item-action" to="/">Home</router-link>
             <router-link class="list-group-item list-group-item-action" to="/link1">Link 1</router-link>
             <router-link class="list-group-item list-group-item-action" to="/link2">Link 2</router-link>
           </b-list-group>
@@ -24,21 +25,27 @@
 <script>
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Link1 from '@/components/link1.vue'
-import Link2 from '@/components/link2.vue'
+import BootstrapVue from 'bootstrap-vue'
 
+import Index from '@/pages/index.vue'
+import Link1 from '@/pages/link1.vue'
+import Link2 from '@/pages/link2.vue'
+
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+Vue.use(BootstrapVue)
 Vue.use(VueRouter)
-
-const router = new VueRouter ({
-  routes: [
-    { path: '/link1', component: Link1 },
-    { path: '/link2', component: Link2 },
-  ],
-})
 
 export default {
   name: 'app',
-  router,
+  router: new VueRouter ({
+    routes: [
+      { path: '/', component: Index },
+      { path: '/link1', component: Link1 },
+      { path: '/link2', component: Link2 },
+    ],
+  }),
 }
 </script>
 
