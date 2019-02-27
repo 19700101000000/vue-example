@@ -23,13 +23,10 @@
 </template>
 
 <script>
-import Router from './router'
-import './bootstrap'
-
 export default {
   name: 'app',
-  router: Router,
 }
 </script>
 
 <style></style>
+

@@ -7,7 +7,7 @@ import Link2 from '@/pages/link2.vue'
 
 Vue.use(VueRouter);
 
-const Router = new VueRouter ({
+export default new VueRouter ({
     mode: 'history',
     routes: [
       { path: '/', component: Index },
@@ -16,4 +16,3 @@ const Router = new VueRouter ({
     ],
 })
 
-export default Router
