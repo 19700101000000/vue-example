@@ -23,18 +23,12 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import Router from './Router'
-import BootstrapVue from 'bootstrap-vue'
-
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-
-Vue.use(BootstrapVue)
+import Router from './router'
+import './bootstrap'
 
 export default {
   name: 'app',
-  router: Router
+  router: Router,
 }
 </script>
 
